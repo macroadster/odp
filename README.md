@@ -4,14 +4,14 @@ Open Data Platform is composed of open source software for streaming and big dat
 
 # Pre-requisite
 
-  # Kubernetes
-  # Helm 3.0+
+  * Kubernetes
+  * Helm 3.0+
 
 # Configuration
 
-  # Change passwords in values-secrets.yaml to customized passwords.
-  # Customize configuration settings in values.yaml to optimize data platform.
-  # Customize airflow.externalDatabase.host to match [release]-postgresql hostname.
+  1. Change passwords in values-secrets.yaml to customized passwords.
+  2. Customize configuration settings in values.yaml to optimize data platform.
+  3. Customize airflow.externalDatabase.host to match [release]-postgresql hostname.
 
 # Deploy
 

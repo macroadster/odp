@@ -1,0 +1,9 @@
+Dependenent helm charts are downloaded from open source unmodified:
+
+airflow    - https://github.com/airflow-helm/charts/tree/main/charts/airflow
+common     - https://github.com/bitnami/charts/tree/main/bitnami/common
+druid      - https://github.com/apache/druid/tree/master/helm/druid
+kafka      - https://github.com/bitnami/charts/tree/main/bitnami/kafka
+postgresql - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+spark      - https://github.com/bitnami/charts/tree/main/bitnami/spark
+superset   - https://github.com/apache/superset/tree/master/helm/superset

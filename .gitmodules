@@ -1,0 +1,3 @@
+[submodule "charts/charts"]
+	path = charts/charts
+	url = https://github.com/airflow-helm/charts

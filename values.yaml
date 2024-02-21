@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  pullPolicy: IfNotPresent
+  repository: api-server
+  pullPolicy: Never #IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -38,7 +38,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 8080
 
 ingress:
   enabled: false
@@ -82,7 +82,7 @@ tolerations: []
 affinity: {}
 
 airflow:
-  enabled: true
+  enabled: false
   image:
     repository: apache/airflow
     tag: latest
@@ -102,6 +102,13 @@ druid:
 
 kafka:
   enabled: true
+  broker:
+    host: r-kafka:9092
+  extraConfig: |
+    autoCreateTopicsEnable=true
+  provisioning:
+    topics:
+      - message-log
 
 postgresql:
   enabled: true
@@ -124,10 +131,10 @@ redis:
   enabled: true
 
 spark:
-  enabled: true
+  enabled: false
 
 superset:
-  enabled: true
+  enabled: false
   image:
     repository: apache/superset
     tag: master-py310

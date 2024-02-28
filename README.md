@@ -2,6 +2,8 @@
 
 Open Data Platform is composed of open source software for streaming and big data analytic workloads.
 
+![Architecture of Open Data Platform](images/open-data-platform.png)
+
 # Pre-requisite
 
   * Kubernetes
